@@ -55,7 +55,9 @@ ifdef SAFE
 
   $(SAFE_DEST):: FORCE
 
-  DEST_OPT := 'DEST_DIR=$(realpath $(SAFE_DEST))'
+# This is done at runtime because $(SAFE_DEST) may not exist at this
+  # point.
+  DEST_OPT := "DEST_DIR=$$(cd $(SAFE_DEST) && pwd)"
 endif
 
 install: $(WORK) $(SAFE_DEST)
