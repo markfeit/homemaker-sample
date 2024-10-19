@@ -12,6 +12,7 @@ Your system mut have the following installed:
  * A POSIX-compliant M4
  * Git
  * GNU Make
+ * Rsync
 
 
 ## Configuration
